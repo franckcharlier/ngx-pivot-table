@@ -7,8 +7,8 @@ declare var $: any;
   selector: 'ngx-pivot-table',
   template: '<div #mypivottable></div>',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['../../../node_modules/pivottable/dist/pivot.min.css',
-    '../../../node_modules/subtotal/dist/subtotal.min.css']
+  styleUrls: ['./pivot.min.css',
+    './plugins/subtotal.min.css']
 })
 export class NgxPivotTableComponent implements OnInit, OnChanges {
   @Input() public data: any;
@@ -18,12 +18,15 @@ export class NgxPivotTableComponent implements OnInit, OnChanges {
   @ViewChild('mypivottable') mypivottable: ElementRef;
   private isPivotInit: boolean;
   private pivotConfig: any;
+  private availableLocales = ['cs', 'da', 'de', 'es', 'fr', 'it', 'nl', 'pl', 'pt', 'ru', 'sq', 'tr', 'zh'];
 
   ngOnInit(): void {
-    System.import('script-loader!pivottable/dist/pivot.min.js').then(() => {
-      System.import('script-loader!pivottable/dist/pivot.fr.min.js').then(() => { });
+    System.import('script-loader!./pivot.min.js').then(() => {
+      for (let i = 0; i < this.availableLocales.length; i++) {
+        System.import('script-loader!./locale/pivot.' + this.availableLocales[i] + '.min.js');
+      }
 
-      System.import('script-loader!subtotal/dist/subtotal.min.js').then(() => {
+      System.import('script-loader!./plugins/subtotal.min.js').then(() => {
         this.isPivotInit = true;
         this.pivotConfig = {};
         this.render();
