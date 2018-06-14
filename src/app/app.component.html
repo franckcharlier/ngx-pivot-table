@@ -1,0 +1,15 @@
+<fieldset>
+  <h4>Options</h4>
+
+  <label for="sub">Use subtotals ?</label>
+  <input type="checkbox" [(ngModel)]="sub" name="sub">
+
+  <br/>
+  <label for="locale">Localization</label>
+  <select name="locale" [(ngModel)]="locale">
+    <option [value]="">English</option>
+    <option [value]="'fr'">Français</option>
+  </select>
+</fieldset>
+
+<ngx-pivot-table [data]="mydata" [useSubtotal]="sub" [useLocale]="locale"></ngx-pivot-table>
