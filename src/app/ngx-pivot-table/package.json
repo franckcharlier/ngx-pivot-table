@@ -1,0 +1,21 @@
+{
+  "name": "ngx-pivot-table",
+  "version": "1.0.2",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "angular-package-builder"
+  },
+  "typings": "./ngx-pivot-table.d.ts",
+  "main": "./bundles/ngx-pivot-table.umd.js",
+  "module": "./esm5/ngx-pivot-table.js",
+  "es2015": "./esm2015/ngx-pivot-table.js",
+  "private": false,
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "jquery-ui-dist": "^1.12.1",
+    "pivottable": "^2.20.0",
+    "subtotal": "^1.11.0-alpha.0"
+  }
+}
