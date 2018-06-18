@@ -3,38 +3,39 @@
   "project": {
     "name": "ngx-pivot-table"
   },
-  "apps": [
-    {
-      "root": "src",
-      "outDir": "dist",
-      "assets": [
-        "assets",
-        "favicon.ico"
-      ],
-      "index": "index.html",
-      "main": "main.ts",
-      "polyfills": "polyfills.ts",
-      "tsconfig": "tsconfig.app.json",
-      "prefix": "",
-      "styles": [
-        "styles.css"
-      ],
-      "scripts": [
-        "../node_modules/jquery/dist/jquery.min.js",
-        "../node_modules/jquery-ui-dist/jquery-ui.js"
-      ],
-      "environmentSource": "environments/environment.ts",
-      "environments": {
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
-      }
+  "apps": [{
+    "root": "src",
+    "outDir": "dist",
+    "assets": [
+      "assets",
+      "favicon.ico"
+    ],
+    "index": "index.html",
+    "main": "main.ts",
+    "polyfills": "polyfills.ts",
+    "tsconfig": "tsconfig.app.json",
+    "prefix": "",
+    "styles": [
+      "../node_modules/pivottable/dist/pivot.min.css",
+      "../node_modules/subtotal/dist/subtotal.min.css",
+      "styles.css"
+    ],
+    "scripts": [
+      "../node_modules/jquery/dist/jquery.min.js",
+      "../node_modules/jquery-ui-dist/jquery-ui.js",
+      "../node_modules/pivottable/dist/pivot.min.js",
+      "../node_modules/pivottable/dist/pivot.fr.min.js",
+      "../node_modules/subtotal/dist/subtotal.min.js"
+    ],
+    "environmentSource": "environments/environment.ts",
+    "environments": {
+      "dev": "environments/environment.ts",
+      "prod": "environments/environment.prod.ts"
     }
-  ],
-  "lint": [
-    {
-      "project": "src/tsconfig.app.json"
-    }
-  ],
+  }],
+  "lint": [{
+    "project": "src/tsconfig.app.json"
+  }],
   "defaults": {
     "styleExt": "css",
     "component": {}

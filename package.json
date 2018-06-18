@@ -1,14 +1,10 @@
 {
   "name": "ngx-pivot-table",
-  "version": "0.0.0",
+  "version": "1.0.2",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start": "ng serve"
   },
   "private": true,
   "dependencies": {
@@ -16,15 +12,13 @@
     "@angular/compiler": "^5.2.0",
     "@angular/core": "^5.2.0",
     "@angular/forms": "^5.2.0",
-    "@angular/http": "^5.2.0",
+    "@angular/http": "^6.0.5",
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
     "jquery": "^3.3.1",
-    "jquery-ui": "^1.12.1",
     "jquery-ui-dist": "^1.12.1",
-    "ngx-papaparse": "^1.2.5",
     "pivottable": "^2.20.0",
     "rxjs": "^5.1.0",
     "subtotal": "^1.11.0-alpha.0",
